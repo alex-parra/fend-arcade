@@ -15,6 +15,9 @@ I took a different approach to the game play. I chose not to include GEMs and ma
 - Each level has a "on-the-road" time target to be reached;
 - When you level up, you get a few health points;
 
+By the way, there is no limit to the number of levels.
+Take it as far as you can!
+
 ## Project Requirements
 - Rubric: [rubric](https://review.udacity.com/#!/projects/2696458597/rubric)
 - Get Started: [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true)
