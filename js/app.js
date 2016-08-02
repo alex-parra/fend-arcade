@@ -116,13 +116,13 @@ var APP = {
     allEnemies = []; // make sure the enemies array is empty;
     for(var i=0; i < this.enemies; i++ ) {
       allEnemies.push(new Enemy());
-    };
+    }
   },
 
   // This function is called at Player.update()
   // Ideally, the Engine.update would call this but I wanted to leave engine.js untouched
   update: function(){
-    if( player.health == 0 ) {
+    if( player.health === 0 ) {
       this.gameOver = 1;
     }
   },
@@ -388,12 +388,12 @@ Player.prototype.move = function(dir){
   switch( dir ) {
     case 'up':
     case 'down':
-      var dirNum = ( dir == 'up' ) ? -1 : 1;
+      var dirNum = ( dir === 'up' ) ? -1 : 1;
       this.y += Math.floor(this.height/2) * dirNum;
     break;
     case 'left':
     case 'right':
-      var dirNum = ( dir == 'left' ) ? -1 : 1;
+      var dirNum = ( dir === 'left' ) ? -1 : 1;
       this.x += Math.floor(this.width) * dirNum;
     break;
   }
@@ -419,6 +419,8 @@ Player.prototype.checkEnemyCollisions = function(){
   if( this.reset === 1 ) return;
 
   var playerBox = this.getHitBox();
+  
+  // TODO: replace for..in with forEach or for
   for( enemyIndex in allEnemies ) {
     var enemyBox = allEnemies[enemyIndex].getHitBox();
 
@@ -498,7 +500,7 @@ document.addEventListener('keyup', function(e) {
   };
 
   allowedKeys[32] = 'SPACE';
-  if( e.keyCode == 32 ) {
+  if( e.keyCode === 32 ) {
     APP.handleInput(allowedKeys[e.keyCode], e);
   }
 
