@@ -1,3 +1,9 @@
+/**
+ * FROGGER HTML5 CANVAS GAME
+ * by Alex Parra da Silva for Udacity FEND
+ * more info: https://github.com/alex-parra/fend-arcade
+ */
+
 var logged = 0;
 var allEnemies = [];
 var player = null;
